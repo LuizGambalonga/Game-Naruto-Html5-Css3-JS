@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.game{
+    height: 500px;
+    width: 80%;
+    border: solid 1px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-top: 5px solid grey;
+    border-left: 5px solid grey;
+    border-right: 5px solid grey;
+    border-bottom: 8px solid grey;
+    background: linear-gradient(180deg rgb(148, 145, 145),rgb(255, 254, 254))
+}
+.naruto{
+ width: 50px; 
+ height: 50px; 
+ position: absolute;
+ bottom: 0px; 
+ left: 20px;
+}
+.sasuke{
+    position: absolute;
+    width: 50px; 
+    height: 50px; 
+    bottom: 0px;
+    animation: sasuke-move 1.4s infinite linear;
+}
+.restart{
+    width: 70px;
+    height: 30px;
+    margin-left: auto;
+    margin-top: 1px;
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 2px;
+    display: none;
+    background-color: white;
+    border: 1px solid grey;
+}
+.time{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(82, 78, 78);
+    margin-left: 1%;
+    margin-top: 1%;
+    display: flex;
+}
+.point{
+    margin-left: 3px;
+}
+.jump{
+    animation: naruto-jump 500ms ease-out;
+}
+.nuvem{
+    height: 100px;
+    position: absolute;
+    top: 90px;
+    animation: nuvem-move 2s infinite linear;
+}
+@keyframes sasuke-move {
+    from{
+       right: -50px; 
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes naruto-jump {
+   0%{
+    bottom: 0px;
+   }
+   25%{
+    bottom: 55px;
+   }
+   50%{
+    bottom: 70px;
+   }
+   75%{
+    bottom:55px
+   }
+   100%{
+    bottom: 0;
+   }
+}
+@keyframes nuvem-move {
+    from{
+       right: -350px; 
+    }
+    to{
+        right: 100%;
+    }
+}
